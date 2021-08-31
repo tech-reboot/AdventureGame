@@ -1,0 +1,173 @@
+
+def lion():
+    print("Congratulations! You have passed the first stage.")
+    print("A lion who hasnt eaten in two weeks would be dead\n")
+    print("-----------------------------------------------------------------")
+    def weapons():
+        print("You are presented with four weapons. Which one do you choose? [1,2,3,4]")
+        print("\n1. Bow and Arrow")
+        print("2. Gun")
+        print("3. Wand")
+        print("4. I Will Fight With My Bare Hands.")
+    
+        weapon = input("Your choice:  ")
+        
+        if weapon == '1':
+            print("You have chosen the bow and arrow.")
+            bow_and_arrow()
+        elif weapon == '2':
+            print("You have chosen the gun.")
+            gun()
+        elif weapon == '3':
+            print("You have chosen the wand.")
+            wand()
+        elif weapon == '4':
+            print("You have chosen to fight with your bare hands. Bold choice.")
+            hands()
+    weapons()
+
+def bow_and_arrow():
+    print("In front of you is a monster. How do you choose to proceed?\n")
+    print("1. Hide behind a bush, and shoot from my bow.")
+    print("2. Run in the open, and keep firing. ")
+    print("3. Surrender, he is too strong. ")
+
+    way_to_go = input("Your choice: ")
+
+    if way_to_go == '1':
+        print("Wise choice. The monster is now dead.")
+        final()
+    elif way_to_go == '2':
+        print("The monster snapped your bow in half.")
+        exit()
+    elif("You are now dead."):
+        exit()
+    else:
+        print("Please enter either 1, 2, 3 or 4 based on your choice. ")
+def gun():
+    print("In front of you is a trained assasin. How do you choose to proceed?\n")
+    print("1. Hide behind a bush, and wait for it to go away.")
+    print("2. Retreat; but keep firing from a distance.")
+    print("3. Surrender, he is too strong. ")
+
+    way_to_go = input("Your choice: ")
+
+    if way_to_go == '2':
+        print("Wise choice. The assasin is now dead.")
+        final()
+    elif way_to_go == '1':
+        print("The assasin found you. You died.")
+        exit()
+    elif("You are now dead."):
+        exit()
+    else:
+        print("Please enter either 1, 2, 3 or 4 based on your choice. ")
+def wand():
+    print("As you enter, you see there is a jungle in front of you. The jungle is on fire. What do you do?\n")
+    print("1. Run Away, i dont want to get burned to crisp.")
+    print("2. Use the wand to create water.")
+    print("3. Use the wand to teleport myself. ")
+
+    way_to_go = input("Your choice: ")
+
+    if way_to_go == '2':
+        print("Wise choice. The fire is now out.")
+        final()
+    elif way_to_go == '3':
+        print("Where will you teleport?")
+        exit()
+    elif("Your cowardness cost you! There is no place to go except towards the fire."):
+        exit()
+    else:
+        print("Please enter either 1, 2, 3 or 4 based on your choice. ")
+def hands():
+    print("You now see a river. Across the river is a portal. What do you do?\n")
+    print("1. Cross the river with a boat.")
+    print("2. Jump on the rocks and cross the river.")
+    print("3. Swim through.")
+
+    way_to_go = input("Your choice: ")
+
+    if way_to_go == '2':
+        print("Wise choice. The fire is now out.")
+        final()
+    elif way_to_go == '3':
+        print("You cannot swim through a river. It is too rocky.")
+        exit()
+    elif("A boat cannot pass through a river."):
+        exit()
+    else:
+        print("Please enter either 1, 2, 3 or 4 based on your choice. ")
+
+def final():
+    print("With a gush of air, you are teleported. The weapon from your hand has vanished. As you look around you see you are trapped in a cage. What do you do?")
+    print("\n1. Break the cage.")
+    print("2. Surrender.")
+
+    final_choice = input("Your choice: ")
+
+    if final_choice == '1':
+        print("You have lost your weapon. You cannot break the cage.")
+        print("Shall i reveal the answer?")
+        yn = input("Y or N: ")
+
+        if yn == 'Y':
+            print("A good soldier knows when to fight and when to surrender. You can't win every battle. Therefore the second option was correct.")
+            exit()
+        elif yn == 'N':
+            print("Ok.")
+            exit()
+        else:
+            print("Please provide a Y or N answer based on your choice.")
+    elif final_choice == '2':
+        print("Wise choice. A good soldier knows when to fight and when to surrender. You can't win every battle. ")
+        exit()
+
+def start():
+    # Intro message
+    print("You are alone in a dark room. In front of you are two doors. On your left is a door, behind which is a lion who hasnt eaten food in two weeks. On your right is a door, behind which is a room filled with water.")
+    choice = input("Which door do you enter from: ")
+
+    if choice == 'l':
+        lion()
+    elif choice == 'r':
+        confirm()
+    elif choice == 'L':
+        lion()
+    elif choice == 'R':
+        confirm()
+    else:
+        print("Please provide a L or R answer, based on your choice. ")
+
+def exit():
+    print("That was an incorrect answer. Thank you for playing this game. Please give us a rating out of 5.")
+    rating = input("Rating out of 5: ")
+
+    if rating == '1':
+        print("Sorry to hear that. How can we improve our game?")
+    elif rating == '2':
+        print("Sorry to hear that. How can we improve our game.")
+    elif rating == '3':
+        print("Glad to hear that! How can we improve it even further?")
+    elif rating == '4':
+        print("Glad to hear that! Any suggestions?")
+    elif rating == '5':
+        print("Glad to hear that! Any suggestions?")
+    else:
+        print("Please enter a whole number from the range of 1 to 5, thanks. ")
+def confirm():
+    print("Do you want to try again?")
+    yn = "Y or N: "
+
+    if yn == 'Y':
+        start()
+    if yn == 'N':
+        exit()
+    if yn == 'y':
+        start()
+    if yn == 'n':
+        exit()
+    else:
+        print("Please enter Y or N according to your choice.")
+    
+start()
